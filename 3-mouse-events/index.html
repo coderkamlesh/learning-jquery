@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery || mouse Events</title>
+    <style>
+        #box{
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="test">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nemo dolor harum, asperiores ex reprehenderit earum at alias suscipit animi!</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            //-------
+            //click event
+            //-------
+            // $("#box").click(function(){
+            //     //for apply css
+            //     // $("#box").css('background-color',"green")
+
+            //     //extracting inner html content
+            //     // let boxContent=$("#box").html();
+                
+            // });
+            
+            //-------
+            //dblclick event
+            //-------
+            // $("#box").dblclick(function(){
+            //     // for apply css
+            //     $("#box").css('background-color',"green")
+            // })
+
+             //-------
+            //contextMenu event
+            //-------
+            // $("#box").contextmenu(function(){
+            //     // for apply css
+            //     $("#box").css('background-color',"green")
+            // })
+
+             //-------
+            //mouseenter event
+            //-------
+            $("#box").mouseenter(function(){
+                // for apply css
+                $("#box").css('background-color',"green")
+            })
+
+             //-------
+            //mouseleave event
+            //-------
+            $("#box").mouseleave(function(){
+                // for apply css
+                $("#box").css('background-color',"yellow")
+            })
+
+        })
+    </script>
+    
+</body>
+</html>

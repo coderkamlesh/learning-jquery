@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery || keyboard events</title>
+    <style>
+    #box{
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box" class="test">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nemo dolor harum, asperiores ex reprehenderit earum at alias suscipit animi!</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+            //-------
+            //keypress event
+            //-------
+            $("body").keypress(function(){
+                //this keyword is instance of selecter
+                $(this).css("background-color","green")
+            })
+
+            //-------
+            //keyup event
+            //-------
+            // $("body").keyup(function(){
+            //     //this keyword is instance of selecter
+            //     $(this).css("background-color","yellow")
+            // })
+
+            //-------
+            //keydown event
+            //-------
+            $("body").keydown(function(){
+                //this keyword is instance of selecter
+                $(this).css("background-color","red")
+            })
+        })
+    </script>
+</body>
+</html>

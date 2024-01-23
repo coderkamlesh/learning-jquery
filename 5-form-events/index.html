@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery || form-events</title>
+    <style>
+		body{ font-family: arial; }
+		
+		#box{
+			background: pink;
+			padding:10px;
+			border:1px solid #000;
+		}
+	</style>
+
+</head>
+<body>
+    <h1>Form Events</h1>
+	<form action="" id="sform">
+		<label for="">Name</label><input type="name" id="sname"><br><br>
+		<label for="">class</label><input type="text" id="sclass"><br><br>
+		<label for="">Country</label>
+		<select id="scountry">
+			<option value="India">India</option>
+			<option value="Pakistan">Pakistan</option>
+			<option value="Bangladesh">Bangladesh</option>
+			<option value="Sri Lanka">Sri Lanka</option>
+			<option value="Nepal">Nepal</option>
+		</select><br><br>
+		<input type="submit">
+	</form>
+	<div id="test" style="border:1px solid red;margin-top:20px;"></div>
+
+    <!-- //jquery cdn script -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+            //-------
+            //focus event
+            //-------
+            // The focus event occurs when an element gets focus (when selected by a mouse click or by "tab-navigating" to it).
+            // $("#sname,#sclass,#scountry").focus(function(){
+            //     $(this).css({
+            //         "border-radius":"50px",
+            //         "background-color":"green",
+            //         "height":"40px"
+            //     })
+            //     // $(this).css("background-color","green",)
+            // })
+
+            //-------
+            //blur event
+            //-------
+            // The blur event occurs when an HTML element loses focus.
+            //ye focus ka ulta hai
+            // $("#sname,#sclass,#scountry").blur(function(){
+            //     $(this).css({
+            //         "border-radius":"30px",
+            //         "background-color":"yellow",
+            //         "height":"30px"
+            //     })
+            //     // $(this).css("background-color","green",)
+            // })
+
+
+            //-------
+            //change event
+            //------
+            //=>The change event occurs when the value of an element has been changed (only works on <input>, <textarea> and <select> elements).
+            // $("#scountry").change(function(){
+            //     const countryContent=$(this).val();
+            //     console.log(countryContent)
+            //     $("#test").html(countryContent)
+            // })
+
+            //------
+            //Select event
+            //------
+            //=>The select event occurs when a text is selected (marked) in a text area or a text field.
+            // $("#sname,#sclass").select(function(){
+            //     $(this).css("background-color","green")
+            // })
+
+            //------
+            //Submit event
+            //------
+            //=>The submit event occurs when a form is submitted.
+            $("#sform").submit(function(e){
+                e.preventDefault()
+                // $(this).css("background-color","green")
+                console.log("form submitted")
+            })
+
+
+
+        })
+    </script>
+
+</body>
+</html>

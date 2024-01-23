@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery || Basic Syntax</title>
+    
+</head>
+<body>
+    <div id="test">
+        <h2>Test box 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur eum nobis ab dolore itaque doloribus nam ea similique, perspiciatis consectetur autem? Quo sit assumenda numquam est perspiciatis iste quae eveniet?</p>
+    </div>
+
+    <div id="test2">
+        <h2>Test box 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur eum nobis ab dolore itaque doloribus nam ea similique, perspiciatis consectetur autem? Quo sit assumenda numquam est perspiciatis iste quae eveniet?</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        $(function(){
+            let firstBox=$("#test").html();
+            console.log(firstBox)
+            let secondBox=$("#test2").html();
+            console.log(secondBox)
+        })
+    </script>
+    
+</body>
+</html>
